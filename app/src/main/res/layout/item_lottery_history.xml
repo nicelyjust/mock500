@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/v_block_gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_20"
+        android:background="@color/common_gray"/>
+    <TextView
+        android:id="@+id/tv_no_lottery_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignWithParentIfMissing="true"
+        android:layout_below="@id/v_block_gray"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:layout_marginTop="@dimen/qb_px_32"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_22"
+        tools:text="第2018098期"/>
+
+    <TextView
+        android:id="@+id/tv_time_lottery_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_no_lottery_history"
+        android:layout_alignBottom="@id/tv_no_lottery_history"
+        android:layout_marginStart="@dimen/qb_px_38"
+        android:layout_toEndOf="@id/tv_no_lottery_history"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_22"
+        tools:text="09-21  09:56"/>
+    <TextView
+        android:id="@+id/tv_week_lottery_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_time_lottery_history"
+        android:layout_alignBottom="@id/tv_time_lottery_history"
+        android:layout_marginStart="@dimen/qb_px_18"
+        android:layout_toEndOf="@id/tv_time_lottery_history"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_22"
+        tools:text="周三"/>
+    <LinearLayout
+        android:id="@+id/ll_ball_container_lottery_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_no_lottery_history"
+        android:layout_marginTop="@dimen/qb_px_20"
+        android:orientation="horizontal"/>
+    <View
+        style="@style/horizontal_line"
+        android:layout_below="@id/ll_ball_container_lottery_history"
+        android:layout_marginTop="@dimen/qb_px_30"/>
+</RelativeLayout>

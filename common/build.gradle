@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    def versions = rootProject.ext.android
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    def support = rootProject.ext.support
+    implementation "com.android.support:appcompat-v7:${support.supportLibraryVersion}"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api 'org.apache.commons:commons-lang3:3.6'
+    //谷歌官方权限库
+    api 'pub.devrel:easypermissions:1.0.1'
+    api 'com.google.code.gson:gson:2.8.1'
+    //轻量网络框架
+    api 'com.lzy.net:okgo:3.0.4'
+    implementation 'com.android.support:multidex:1.0.3'
+}

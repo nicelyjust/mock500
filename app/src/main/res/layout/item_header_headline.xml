@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <com.youth.banner.Banner
+        android:id="@+id/banner_head_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_210"/>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_84">
+        <ImageView
+            android:id="@+id/iv_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/qb_px_32"
+            android:contentDescription="@null"
+            android:src="@mipmap/icon_advertising"/>
+        <com.yunzhou.tdinformation.view.widget.MarqueeView
+            android:id="@+id/mv_ad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/qb_px_19"
+            android:layout_toEndOf="@id/iv_ad"
+            app:mvAnimDuration="1000"
+            app:mvDirection="bottom_to_top"
+            app:mvInterval="3000"
+            app:mvSingleLine="true"
+            app:mvTextColor="@color/colorText6"
+            app:mvTextSize="@dimen/qb_px_24"/>
+    </RelativeLayout>
+    <View
+        android:background="@color/common_gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_20"/>
+</LinearLayout>

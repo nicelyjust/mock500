@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+    <LinearLayout
+        android:background="@drawable/shape_oder_dialog"
+        android:layout_marginTop="@dimen/qb_px_110"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_custom_lottery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_80"
+            app:tl_indicator_color="@color/common_red"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_margin_bottom="@dimen/qb_px_2"
+            app:tl_indicator_width="@dimen/qb_px_30"
+            app:tl_indicator_width_equal_title="false"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/colorText3"
+            app:tl_textUnselectColor="@color/colorText6"
+            app:tl_textsize="@dimen/qb_px_36"/>
+        <View style="@style/horizontal_line"/>
+        <com.yunzhou.tdinformation.view.NoScrollViewPager
+            android:id="@+id/vp_custom_lottery"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+    <RelativeLayout
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_93">
+        <View style="@style/horizontal_line"/>
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:background="@null"
+            android:text="点击关闭"
+            android:textColor="@color/colorText6"
+            android:textSize="@dimen/qb_px_30"/>
+    </RelativeLayout>
+</LinearLayout>

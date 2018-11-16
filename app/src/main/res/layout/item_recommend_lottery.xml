@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_recommend_title"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/qb_px_50"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:gravity="center_vertical"
+        android:text="@string/recommend_book"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_24"/>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_93"
+        android:background="@android:color/white">
+        <TextView
+            android:id="@+id/tv_lottery_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start|center_vertical"
+            android:layout_marginStart="@dimen/qb_px_32"
+            android:gravity="center"
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/qb_px_30"
+            tools:text="大乐透"/>
+        <Button
+            android:id="@+id/btn_select_lottery"
+            android:layout_width="@dimen/qb_px_115"
+            android:layout_height="@dimen/qb_px_58"
+            android:layout_gravity="end|center_vertical"
+            android:layout_marginEnd="@dimen/qb_px_32"
+            android:layout_marginStart="@dimen/qb_px_32"
+            android:background="@drawable/shape_red_comment_bg"
+            android:gravity="center"
+            android:text="+"
+            android:textColor="@color/white"
+            android:textSize="@dimen/qb_px_42"/>
+    </FrameLayout>
+    <View style="@style/horizontal_line"/>
+</LinearLayout>

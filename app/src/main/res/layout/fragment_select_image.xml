@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white"
+        android:paddingTop="1dp">
+
+        <ImageView
+            android:layout_marginStart="@dimen/qb_px_32"
+            android:layout_centerVertical="true"
+            android:id="@+id/icon_back"
+            android:layout_width="@dimen/qb_px_32"
+            android:layout_height="@dimen/qb_px_32"
+            android:clickable="true"
+            android:contentDescription="@string/app_name"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/btn_back_dark_pressed"
+            tools:ignore="KeyboardInaccessibleWidget"/>
+
+        <Button
+            android:id="@+id/btn_title_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Base.TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:gravity="center"
+            android:text="选择图片"
+            tools:ignore="HardcodedText"/>
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_1"
+        android:layout_below="@id/toolbar"
+        android:background="@drawable/shadow_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/line"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_image"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:overScrollMode="never"
+            android:padding="1dp"
+            android:scrollbars="none"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/common_gray"/>
+
+        <FrameLayout
+            android:id="@+id/lay_button"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_96"
+            android:clickable="true">
+
+            <Button
+                android:id="@+id/btn_preview"
+                android:layout_width="@dimen/qb_px_120"
+                android:layout_height="@dimen/qb_px_60"
+                android:layout_gravity="start|center_vertical"
+                android:layout_marginStart="@dimen/qb_px_32"
+                android:background="@drawable/btn_select_image_preview_bg_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:text="@string/image_select_opt_preview"
+                android:textSize="@dimen/qb_px_30"/>
+
+            <Button
+                android:id="@+id/btn_done"
+                android:layout_width="@dimen/qb_px_120"
+                android:layout_height="@dimen/qb_px_60"
+                android:layout_gravity="end|center_vertical"
+                android:layout_marginEnd="@dimen/qb_px_32"
+                android:background="@drawable/btn_select_image_done_bg_selector"
+                android:enabled="false"
+                android:gravity="center"
+                android:textColor="@color/btn_finish_color"
+                android:text="@string/image_select_opt_done"
+                android:textSize="@dimen/qb_px_30"/>
+
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

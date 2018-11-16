@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_90">
+    <TextView
+        android:id="@+id/tv_name_predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:textColor="@color/colorText3"
+        android:textSize="@dimen/qb_px_24"
+        tools:text="黑诶嘿嘿额黑恶黑恶"/>
+    <TextView
+        android:id="@+id/tv_recommend_predict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/qb_px_32"
+        android:background="@drawable/shape_red_stroke_bg"
+        android:paddingBottom="@dimen/qb_px_2"
+        android:paddingEnd="@dimen/qb_px_9"
+        android:paddingStart="@dimen/qb_px_9"
+        android:paddingTop="@dimen/qb_px_2"
+        android:text="推荐"
+        android:textColor="@color/common_red"
+        android:textSize="@dimen/qb_px_20"/>
+    <View
+        android:layout_alignParentBottom="true"
+        style="@style/horizontal_line"/>
+</RelativeLayout>

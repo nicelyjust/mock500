@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_268">
+    <HorizontalScrollView
+        android:layout_marginTop="@dimen/qb_px_12"
+        android:id="@+id/hsv_low_lottery"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_94"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:orientation="horizontal">
+        <RadioGroup
+            android:id="@+id/rg_lottery"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+        </RadioGroup>
+    </HorizontalScrollView>
+    <TextView
+        android:id="@+id/tv_new_reward"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/hsv_low_lottery"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:text="@string/new_reward"
+        android:textColor="@color/colorText3"
+        android:textSize="@dimen/qb_px_32"/>
+    <TextView
+        android:id="@+id/tv_reward_no"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_new_reward"
+        android:layout_marginStart="@dimen/qb_px_33"
+        android:layout_toEndOf="@id/tv_new_reward"
+        android:text="----期"
+        android:textColor="@color/colorTextA"
+        android:textSize="@dimen/qb_px_22"/>
+    <TextView
+        android:id="@+id/tv_date_low_lottery"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/tv_new_reward"
+        android:layout_marginStart="@dimen/qb_px_31"
+        android:layout_toEndOf="@id/tv_reward_no"
+        android:text="星期--"
+        android:textColor="@color/colorTextA"
+        android:textSize="@dimen/qb_px_22"/>
+
+    <View
+        android:id="@+id/v_block_gray"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_20"
+        android:layout_alignParentBottom="true"
+        android:background="@color/common_gray"/>
+    <LinearLayout
+        android:id="@+id/ll_ball_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/v_block_gray"
+        android:layout_below="@id/tv_new_reward"
+        android:layout_marginStart="@dimen/qb_px_20"
+        android:layout_marginTop="@dimen/qb_px_20"
+        android:orientation="horizontal">
+
+    </LinearLayout>
+
+</RelativeLayout>

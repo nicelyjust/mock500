@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_90"
+    android:background="@drawable/ic_material">
+    <TextView
+        android:id="@+id/tv_setting_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:textColor="@color/colorText3"
+        android:textSize="@dimen/qb_px_32"/>
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/qb_px_32"
+        android:src="@mipmap/spinner_back"/>
+    <TextView
+        android:id="@+id/tv_show"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/qb_px_30"
+        android:layout_toStartOf="@id/iv_back"
+        android:src="@mipmap/default_head"
+        android:lines="1"
+        android:ellipsize="end"
+        android:maxLength="16"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_30"/>
+    <View
+        android:id="@+id/v_setting_line"
+        style="@style/horizontal_line"
+        android:layout_alignParentBottom="true"/>
+</RelativeLayout>

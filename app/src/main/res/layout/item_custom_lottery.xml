@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          android:id="@+id/tv_lottery_name"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/qb_px_90"
+          android:layout_marginEnd="@dimen/qb_px_10"
+          android:layout_marginStart="@dimen/qb_px_10"
+          android:layout_marginTop="@dimen/qb_px_15"
+          android:layout_marginBottom="@dimen/qb_px_15"
+          android:background="@drawable/selector_lottery_func"
+          android:paddingLeft="@dimen/qb_px_10"
+          android:paddingRight="@dimen/qb_px_10"
+          android:textSize="@dimen/qb_px_32"
+          android:textColor="@color/colorText3"
+          android:gravity="center"
+          tools:text="哈哈哈"/>

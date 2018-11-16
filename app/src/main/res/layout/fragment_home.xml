@@ -1,0 +1,56 @@
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.yunzhou.tdinformation.home.HomeFragment">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_80"
+            app:layout_scrollFlags="scroll">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:src="@mipmap/ic_headline_top"/>
+            <ImageView
+                android:id="@+id/iv_lucky_bag"
+                android:layout_marginEnd="@dimen/qb_px_32"
+                android:layout_gravity="end"
+                android:src="@mipmap/lucky_bag"
+                android:contentDescription="@null"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </android.support.v7.widget.Toolbar>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_home"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_60"
+            app:tl_indicator_color="@color/common_red"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_width_equal_title="false"
+            app:tl_indicator_width="@dimen/qb_px_30"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/common_red"
+            app:tl_textUnselectColor="@color/colorText6"
+            app:tl_indicator_margin_bottom="@dimen/qb_px_5"
+            app:tl_textsize="@dimen/qb_px_32"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</android.support.design.widget.CoordinatorLayout>
+

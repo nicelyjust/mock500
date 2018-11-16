@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    tools:context=".login.fragment.ForgetFragment">
+
+    <!--手机号-->
+    <com.yunzhou.tdinformation.view.login.LoginItem
+        android:id="@+id/li_input_phone_forget"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_91"
+        app:li_style="phone"/>
+    <!--密码-->
+    <com.yunzhou.tdinformation.view.login.LoginItem
+        android:id="@+id/li_input_auth_forget"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_91"
+        android:layout_below="@id/li_input_phone_forget"
+        app:li_style="auth"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_confirm_forget"
+        style="@style/confirm_btn_style"
+        android:layout_below="@id/li_input_auth_forget"
+        android:layout_marginTop="@dimen/qb_px_80"
+        android:text="@string/app_confirm"/>
+
+</RelativeLayout>

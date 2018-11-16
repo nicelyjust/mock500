@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MarqueeViewStyle">
+        <attr name="mvInterval" format="integer|reference"/>
+        <attr name="mvAnimDuration" format="integer|reference"/>
+        <attr name="mvTextSize" format="dimension|reference"/>
+        <attr name="mvTextColor" format="color|reference"/>
+        <attr name="mvSingleLine" format="boolean"/>
+        <attr name="mvGravity">
+            <enum name="left" value="0"/>
+            <enum name="center" value="1"/>
+            <enum name="right" value="2"/>
+        </attr>
+        <attr name="mvDirection">
+            <enum name="bottom_to_top" value="0"/>
+            <enum name="top_to_bottom" value="1"/>
+            <enum name="right_to_left" value="2"/>
+            <enum name="left_to_right" value="3"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="LoginItem">
+        <attr name="li_style" >
+            <enum name="phone" value="0"/>
+            <enum name="password" value="1"/>
+            <enum name="auth" value="2"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="PayPwdView">
+        <attr name="count" format="integer" />
+        <attr name="border_color" format="color" />
+        <attr name="dot_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="SquareLayout">
+        <attr name="oscAccordTo" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="FuncItem">
+        <attr name="android:text"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textSize"/>
+        <attr name="funcIcon" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="SettingItem">
+        <attr name="settingTxt" format="string|reference"/>
+        <attr name="settingTextColor" format="color|reference"/>
+        <attr name="settingTextSize" format="dimension|reference"/>
+        <attr name="showTxt" format="string|reference"/>
+        <attr name="showTextColor" format="color|reference"/>
+        <attr name="showTextSize" format="dimension|reference"/>
+        <attr name="isShowLine" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleImageView">
+        <attr name="ci_border_width" format="dimension" />
+        <attr name="ci_border_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="RoundCornerImageView">
+        <attr name="round_radius" format="dimension" />
+    </declare-styleable>
+</resources>

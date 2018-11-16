@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/ic_material"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <View
+        android:id="@+id/v_block_gray"
+        style="@style/horizontal_block"/>
+    <ImageView
+        android:id="@+id/iv_campaign"
+        android:layout_width="@dimen/qb_px_180"
+        android:layout_height="@dimen/qb_px_140"
+        android:layout_below="@id/v_block_gray"
+        android:layout_marginBottom="@dimen/qb_px_20"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:layout_marginTop="@dimen/qb_px_20"
+        android:src="@mipmap/default_img"/>
+    <TextView
+        android:id="@+id/tv_campaign_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_campaign"
+        android:layout_marginStart="21dp"
+        android:layout_toEndOf="@+id/iv_campaign"
+        android:textColor="@color/colorText3"
+        android:textSize="@dimen/qb_px_32"
+        tools:text="充值有事家看到你"/>
+
+    <TextView
+        android:id="@+id/tv_campaign_deadline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/iv_campaign"
+        android:layout_alignStart="@id/tv_campaign_name"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_24"
+        android:lines="1"
+        tools:text="2018年-2019"/>
+    <TextView
+        android:id="@+id/tv_campaign_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/tv_campaign_deadline"
+        android:layout_alignStart="@id/tv_campaign_name"
+        android:layout_marginBottom="@dimen/qb_px_19"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_24"
+        tools:text="100送两百"/>
+    <View
+        style="@style/horizontal_line"
+        android:layout_below="@id/iv_campaign"/>
+</RelativeLayout>

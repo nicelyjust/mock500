@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/qb_px_550"
+    android:layout_height="@dimen/qb_px_530"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@drawable/shape_dialog_pay"
+    android:gravity="center_horizontal">
+    <TextView
+        android:layout_marginTop="@dimen/qb_px_20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="解锁成功"
+        android:textColor="@color/colorText3"
+        android:textSize="@dimen/qb_px_32"/>
+    <ImageView
+        android:src="@mipmap/pay_success"
+        android:layout_marginTop="@dimen/qb_px_19"
+        android:layout_width="@dimen/qb_px_297"
+        android:layout_height="@dimen/qb_px_220"/>
+    <TextView
+        android:layout_marginTop="@dimen/qb_px_29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="千万别错过了投注时间哦~"
+        android:textColor="@color/colorText3"
+        android:textSize="@dimen/qb_px_26"/>
+    <TextView
+        android:id="@+id/tv_deadline"
+        android:layout_marginTop="@dimen/qb_px_19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="距离截止时间: "
+        android:textColor="@color/common_red"
+        android:textSize="@dimen/qb_px_20"/>
+    <TextView
+        android:id="@+id/tv_know"
+        android:padding="@dimen/qb_px_12"
+        android:layout_marginTop="@dimen/qb_px_38"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="我知道了"
+        android:textColor="#1E90FF"
+        android:textSize="@dimen/qb_px_30"/>
+</LinearLayout>

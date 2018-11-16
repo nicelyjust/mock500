@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_90"
+    android:background="@android:color/white">
+    <TextView
+        android:id="@+id/tv_type_name"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/toolbar_title_color"
+        android:textSize="@dimen/qb_px_32"
+        tools:text="@string/app_phone"/>
+
+    <FrameLayout
+        android:id="@+id/fl_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/qb_px_32">
+        <ImageButton
+            android:id="@+id/ib_clear_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:padding="@dimen/qb_px_15"
+            android:src="@mipmap/clear_small"
+            tools:visibility="gone"/>
+        <TextView
+            android:id="@+id/tv_send_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/et_input"
+            android:layout_alignBottom="@+id/et_input"
+            android:layout_alignStart="@+id/fl_right"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/selector_send_auth"
+            android:includeFontPadding="false"
+            android:padding="@dimen/qb_px_12"
+            android:text="@string/app_send_auth"
+            android:textColor="@drawable/selector_send_auth_color" android:textSize="@dimen/qb_px_28"/>
+    </FrameLayout>
+    <EditText
+        android:layout_marginEnd="@dimen/qb_px_32"
+        android:layout_toStartOf="@id/fl_right"
+        android:layout_alignParentStart="true"
+        android:id="@+id/et_input"
+        style="@style/phone_style"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/qb_px_173"
+        android:background="@null"
+        android:gravity="center_vertical"
+        android:includeFontPadding="false"
+        android:textColor="@color/toolbar_title_color"
+        android:textSize="@dimen/qb_px_28"
+        tools:hint="@string/app_input_phone"/>
+</RelativeLayout>

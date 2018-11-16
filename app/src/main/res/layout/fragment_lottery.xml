@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lottery.lottery.LotteryFragment">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_95"
+            android:background="?attr/colorPrimary">
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                tools:text="标题"/>
+        </android.support.v7.widget.Toolbar>
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_lottery"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_60"
+            android:background="@color/base_F5F5F5"
+            app:tl_indicator_color="@color/common_red"
+            app:tl_indicator_corner_radius="0dp"
+            app:tl_indicator_margin_bottom="1px"
+            app:tl_indicator_margin_top="0dp"
+            app:tl_indicator_style="BLOCK"
+            app:tl_tab_space_equal="true"
+            app:tl_textsize="@dimen/qb_px_32"
+            app:tl_textSelectColor="@color/white"
+            app:tl_textUnselectColor="@color/colorText6"/>
+    </android.support.design.widget.AppBarLayout>
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_lottery"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</android.support.design.widget.CoordinatorLayout>

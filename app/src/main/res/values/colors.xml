@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@android:color/white</color>
+    <color name="colorPrimaryDark">@android:color/white</color>
+    <color name="colorAccent">#DD262C</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="white">#FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#fff3f3f3</color>
+    <color name="colorGray1">#EFEFF4</color>
+
+    <!-- 公共浅色背景颜色-->
+    <color name="common_dark_color">#FFE6E6E6</color>
+    <color name="common_dark_color2">#FFD2D2D2</color>
+
+    <color name="common_red">#DD262C</color>
+    <color name="common_blue">#5893F4</color>
+    <color name="common_gray">#E6E6E6</color>
+    <color name="common_orange">#FB6F1B</color>
+
+    <color name="colorTextA">#aaaaaa</color>
+    <color name="colorTextC">#cccccc</color>
+    <color name="colorText3">#333333</color>
+    <color name="colorText6">#666666</color>
+    <color name="colorText9">#999999</color>
+
+    <!-- 全局toolbar标题颜色 -->
+    <color name="toolbar_title_color">#333333</color>
+
+    <color name="gray_line">#ededed</color>
+    <color name="gray_btn">#e8e9e9</color>
+    <color name="base_F2F2F2">#F2F2F2</color>
+    <color name="base_B5B5B5">#B5B5B5</color>
+    <color name="base_697A9F">#697A9F</color>
+    <color name="base_DCDCDC">#DCDCDC</color>
+    <color name="black_alpha_48">#30000000</color>
+    <color name="trans">#00000000</color>
+
+    <color name="bg_press">#ebebeb</color>
+    <color name="bg_press_material">#d4d4d4</color>
+    <color name="base_FEFEFE">#FEFEFE</color>
+    <color name="base_F5F5F5">#F5F5F5</color>
+    <color name="base_FFFEFE">#FFFEFE</color>
+    <color name="base_ED7A01">#ED7A01</color>
+    <color name="base_E3E3E3">#E3E3E3</color>
+    <color name="base_F0F0F0">#F0F0F0</color>
+    <color name="base_D2D2D2">#D2D2D2</color>
+    <color name="c_F57004">#F57004</color>
+    <color name="c_F64A50">#F64A50</color>
+    <color name="c_FFDD20">#FFDD20</color>
+
+</resources>

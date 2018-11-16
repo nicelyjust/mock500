@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:windowSoftInputMode="adjustPan|adjustResize"
+    android:orientation="vertical"
+    tools:ignore="KeyboardInaccessibleWidget">
+
+    <View style="@style/horizontal_line" />
+
+    <EditText
+        android:background="@drawable/shape_gray_stroke_mid_radius_bg"
+        android:id="@+id/et_comment"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="@dimen/qb_px_12"
+        android:layout_marginLeft="@dimen/qb_px_16"
+        android:layout_marginRight="@dimen/qb_px_16"
+        android:layout_marginTop="@dimen/qb_px_12"
+        android:focusable="true"
+        android:gravity="top"
+        android:hint="@string/post_something"
+        android:paddingBottom="8dp"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:paddingTop="8dp"
+        android:textSize="@dimen/qb_px_24" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingBottom="6dp"
+        android:paddingLeft="@dimen/qb_px_16"
+        android:paddingRight="@dimen/qb_px_16">
+        <TextView
+            android:textColor="@color/colorText6"
+            android:textSize="@dimen/qb_px_20"
+            android:text="请文明发言并遵守国家相关法律法规"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btn_comment"
+            android:layout_width="60dp"
+            android:layout_height="30dp"
+            android:background="@drawable/selector_post_bg"
+            android:elevation="0dp"
+            android:outlineProvider="none"
+            android:text="@string/send"
+            android:textColor="@color/btn_send_color"
+            tools:targetApi="lollipop" />
+    </LinearLayout>
+</LinearLayout>

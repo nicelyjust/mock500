@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".lottery.history.LowLotteryDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb_tool_bar_lottery_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_95"
+            android:background="?attr/colorPrimary">
+            <TextView
+                android:id="@+id/tv_title_lottery_detail"
+                style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/expert_page"/>
+        </android.support.v7.widget.Toolbar>
+        <!--介绍内容-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:id="@+id/shadow"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_1"
+                android:background="@drawable/shadow_line"/>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/qb_px_32">
+
+                <TextView
+                    android:id="@+id/tv_no_lottery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/qb_px_32"
+                    android:textColor="@color/colorText9"
+                    android:textSize="@dimen/qb_px_22"
+                    tools:text="第2018098期"/>
+
+                <TextView
+                    android:id="@+id/tv_time_lottery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_no_lottery"
+                    android:layout_alignBottom="@id/tv_no_lottery"
+                    android:layout_marginStart="@dimen/qb_px_38"
+                    android:layout_toEndOf="@id/tv_no_lottery"
+                    android:textColor="@color/colorText9"
+                    android:textSize="@dimen/qb_px_22"
+                    tools:text="09-21  09:56"/>
+                <TextView
+                    android:id="@+id/tv_week_lottery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@id/tv_time_lottery"
+                    android:layout_alignBottom="@id/tv_time_lottery"
+                    android:layout_marginStart="@dimen/qb_px_18"
+                    android:layout_toEndOf="@id/tv_time_lottery"
+                    android:textColor="@color/colorText9"
+                    android:textSize="@dimen/qb_px_22"
+                    tools:text="周三"/>
+                <LinearLayout
+                    android:id="@+id/ll_ball_container_lottery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_week_lottery"
+                    android:layout_marginStart="@dimen/qb_px_20"
+                    android:layout_marginTop="@dimen/qb_px_19"
+                    android:orientation="horizontal"/>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/qb_px_20"
+                    android:layout_below="@id/ll_ball_container_lottery"
+                    android:layout_marginTop="@dimen/qb_px_19"
+                    android:background="@color/common_gray"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <com.flyco.tablayout.SlidingTabLayout
+            android:id="@+id/tab_lottery_detail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_95"
+            app:tl_indicator_color="@color/common_red"
+            app:tl_indicator_height="2dp"
+            app:tl_indicator_width_equal_title="true"
+            app:tl_tab_space_equal="true"
+            app:tl_textSelectColor="@color/common_red"
+            app:tl_textUnselectColor="@color/colorText3"
+            app:tl_textsize="@dimen/qb_px_30"/>
+        <View style="@style/horizontal_line"/>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_lottery_detail"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</android.support.design.widget.CoordinatorLayout>

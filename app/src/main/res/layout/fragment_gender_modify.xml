@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.scwang.smartrefresh.layout.SmartRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:srlEnableLoadMore="false"
+    app:srlEnableOverScrollDrag="true"
+    app:srlEnableRefresh="false"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_marginTop="@dimen/qb_px_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_gentle"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_79"
+            android:background="@drawable/ic_material">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/qb_px_32"
+                android:text="男"
+                android:textColor="@android:color/black"/>
+            <ImageView
+                android:id="@+id/iv_gentle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/qb_px_32"
+                android:src="@mipmap/spinner_back"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        <View style="@style/horizontal_line"/>
+        <RelativeLayout
+            android:id="@+id/rl_lady"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/qb_px_79"
+            android:background="@drawable/ic_material">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/qb_px_32"
+                android:text="女"
+                android:textColor="@android:color/black"/>
+            <ImageView
+                android:id="@+id/iv_lady"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/qb_px_32"
+                android:src="@mipmap/spinner_back"
+                android:visibility="gone"/>
+        </RelativeLayout>
+        <View style="@style/horizontal_line"/>
+    </LinearLayout>
+</com.scwang.smartrefresh.layout.SmartRefreshLayout>

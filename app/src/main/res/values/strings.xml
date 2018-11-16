@@ -1,0 +1,178 @@
+<resources>
+    <string name="app_name">今日云彩</string>
+
+    <string-array name="bottom">
+        <item>首页</item>
+        <item>开奖</item>
+        <item>社区</item>
+        <item>我的</item>
+    </string-array>
+    <string-array name="home_top">
+        <item>头条</item>
+        <item>低频彩</item>
+        <item>竞彩</item>
+    </string-array>
+    <string-array name="lottery">
+        <item>全国</item>
+        <item>地方</item>
+        <item>高频</item>
+        <item>定制</item>
+    </string-array>
+    <string-array name="lottery_detail">
+        <item>开奖详情</item>
+        <item>下期预测</item>
+        <item>热议</item>
+    </string-array>
+    <string-array name="community">
+        <item>广场</item>
+        <item>圈子</item>
+        <item>关注</item>
+    </string-array>
+    <string-array name="expert">
+        <item>文章</item>
+        <item>战绩</item>
+        <item>动态</item>
+    </string-array>
+    <string-array name="tag">
+        <item>足球俱乐部</item>
+        <item>数字达人</item>
+        <item>篮球天地</item>
+        <item>高频彩</item>
+        <item>吐槽反馈</item>
+    </string-array>
+    <string-array name="custom_lottery">
+        <item>全国</item>
+        <item>地方</item>
+        <item>高频</item>
+    </string-array>
+    <string-array name="collect">
+        <item>文章</item>
+        <item>帖子</item>
+    </string-array>
+    <string-array name="pay_article">
+        <item>已付费</item>
+        <item>已阅读</item>
+    </string-array>
+    <string name="expert_info">专家资讯</string>
+    <string name="more_tip">更多资讯</string>
+    <string name="no_more_error">没有更多数据！</string>
+    <!--登录注册   start-->
+    <string name="app_login_title">登录</string>
+    <string name="app_password_title">找回密码</string>
+    <string name="app_new_password_title">设置新密码</string>
+    <string name="app_register_title">注册</string>
+    <string name="app_phone">手机号</string>
+    <string name="app_input_phone">请输入手机号</string>
+
+    <string name="app_password">密码</string>
+    <string name="app_auth">验证码</string>
+
+    <string name="app_input_password">输入密码</string>
+    <string name="app_input_auth">请输入验证码</string>
+    <string name="app_send_auth">发送验证码</string>
+    <string name="app_resend_auth">S重新获取</string>
+
+    <string name="app_password_login">使用密码登录</string>
+    <string name="app_auth_login">使用验证码登录</string>
+
+    <string name="app_password_limit">请输入密码 (8~16位数字密码组合)</string>
+    <string name="app_password_confirm">请确认密码 (8~16位数字密码组合)</string>
+
+    <string name="app_new_password">新密码</string>
+    <string name="app_forget_password">忘记密码</string>
+    <string name="app_confirm_password">确认密码</string>
+    <string name="app_login_password">登录密码</string>
+    <string name="app_auth_password">验证密码</string>
+
+    <string name="app_confirm">确 认</string>
+    <string name="app_register">注 册</string>
+
+    <string name="phoneNum_error">请输入正确的手机号码！</string>
+    <string name="register_error">请输入正确的注册信息！</string>
+    <string name="login_error">请输入正确的登陆信息！</string>
+    <string name="forget_error">请输入正确的修改信息！</string>
+    <string name="old_phoneNum_error">请输入正确的旧手机号码</string>
+    <string name="new_phoneNum_error">请输入正确的新手机号码</string>
+
+    <string name="invalid_password_tip">请输入8~16位合法密码</string>
+    <string name="invalid_auth_tip">请输入4位长度的验证码</string>
+    <string name="password_no_equal">密码输入不一致!</string>
+    <string name="login_ok">登录成功</string>
+    <!-- 登录注册   end -->
+
+    <!-- 支付模块 start -->
+    <string name="please_pay_title">请输入你的交易密码</string>
+    <string name="order_title">确认付款</string>
+    <string name="order_info">订单信息</string>
+    <string name="order_info_title">彩票号支付订单</string>
+    <string name="order_pay">付款方式</string>
+    <string name="order_red_money">红包</string>
+    <string name="coin">彩币</string>
+    <string name="pay_right_now">立即支付</string>
+    <!-- 支付模块 end -->
+    <string name="data_error">数据异常,请重试尝试！</string>
+    <string name="net_error">请重新加载</string>
+    <string name="no_network">网络无法连接\n请检查您的手机是否联网</string>
+    <string name="no_net">网络无法连接</string>
+
+    <string name="big_reward">大乐透</string>
+    <string name="double_ball">双色球</string>
+    <string name="new_reward">最新开奖</string>
+
+    <string name="share">分享</string>
+    <string name="request_wait">请求网络中…</string>
+
+    <string name="announcement">公告</string>
+    <string name="recommend">推荐</string>
+    <string name="today_new_post">今日新帖</string>
+    <string name="page_empty">暂无数据</string>
+    <string name="post_something">我来说两句…</string>
+    <string name="all_comment">全部评论</string>
+    <string name="follow_plus">+关注</string>
+    <string name="has_follow">已关注</string>
+    <string name="send">发送</string>
+    <string name="fans_num">粉丝数</string>
+    <string name="oder_count">发单数</string>
+    <string name="good_at">擅长领域:</string>
+    <string name="intro">个人简介:</string>
+    <string name="pay">付费</string>
+    <string name="expert_page">专家主页</string>
+    <!--开奖-->
+    <string name="lucky_lottery">彩票开奖</string>
+    <string name="red_packet">红包</string>
+
+    <string name="gallery_save_file_not_have_external_storage_permission">没有外部存储权限!</string>
+    <string name="gallery_save_file_not_have_external_storage">没有外部存储!</string>
+    <string name="gallery_save_file_success">保存成功!</string>
+    <string name="gallery_save_file_failed">存储失败!</string>
+    <string name="image_select_opt_done">完成</string>
+    <string name="image_select_opt_preview">预览</string>
+    <string name="custom_more_lottery">+ 定制更多彩种</string>
+    <string name="recommend_book">推荐定制</string>
+    <string name="empty_subscribe_lottery">您的定制空空如也</string>
+    <string name="coin_center">彩币:</string>
+    <string name="grade">等级:</string>
+    <string name="setting_sign">设置个性签名</string>
+    <string name="cancel">取消</string>
+    <string name="finish">完成</string>
+
+    <string name="my_collect">我的收藏</string>
+    <string name="pay_article">付费文章</string>
+    <string name="my_post">我的帖子</string>
+    <string name="my_red_packet">我的红包</string>
+    <string name="feedback_center">意见反馈</string>
+    <string name="campaign_center">活动中心</string>
+    <string name="contact_num">400–820–8820</string>
+    <string name="help_center">帮助中心</string>
+    <string name="ta_follow">TA的关注</string>
+    <string name="ta_fans">TA的粉丝</string>
+    <string name="follow">关注</string>
+    <string name="follow_each_other">互相关注</string>
+    <string name="fans">粉丝</string>
+    <string name="title_icon_null">图像不存在，上传失败</string>
+    <string name="please_post_tip">快来晒晒你的单吧…</string>
+    <string name="add_tag">添加标签</string>
+    <string name="login_out">退出登录</string>
+    <string name="please_login">您好,请先登录</string>
+    <string name="next_step">下一步</string>
+</resources>

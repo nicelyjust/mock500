@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              tools:context="com.yunzhou.tdinformation.setting.PayPsdModifyActivity">
+
+    <include layout="@layout/include_title_txt"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/base_F0F0F0"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_password_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_32"
+            android:layout_marginTop="@dimen/qb_px_18"
+            android:text="请输入原支付密码，验证身份"
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/qb_px_28"/>
+
+        <com.yunzhou.tdinformation.view.pay.PayPwdView
+            android:id="@+id/payPwdView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_32"
+            android:layout_marginRight="@dimen/qb_px_32"
+            android:layout_marginTop="@dimen/qb_px_21"
+            android:background="@color/colorPrimary"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/qb_px_32"
+            android:layout_marginTop="@dimen/qb_px_19"
+            android:text="*为了保障账户安全，建议支付密码不要与银行卡密码相同"
+            android:textColor="@color/colorText9"
+            android:textSize="@dimen/qb_px_22"/>
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/btn_confirm_modify"
+            style="@style/confirm_btn_style"
+            android:layout_marginTop="@dimen/qb_px_43"
+            android:background="@drawable/selector_next_step"
+            android:enabled="false"
+            android:textColor="@color/white"
+            android:text="@string/next_step"/>
+        <android.widget.Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <com.yunzhou.tdinformation.view.pay.PwdInputMethodView
+            android:id="@+id/inputMethodView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>

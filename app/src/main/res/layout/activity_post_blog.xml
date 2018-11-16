@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_96">
+
+        <TextView
+            android:id="@+id/tv_title_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="我要发帖"
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/qb_px_36"/>
+
+        <TextView
+            android:id="@+id/btn_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/qb_px_27"
+            android:background="@drawable/ic_material_ripple"
+            android:padding="@dimen/qb_px_5"
+            android:text="取消"
+            android:textColor="#4389C4"
+            android:textSize="@dimen/qb_px_30"/>
+
+        <TextView
+            android:id="@+id/btn_confirm_post"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/qb_px_27"
+            android:background="@drawable/ic_material_ripple"
+            android:padding="@dimen/qb_px_5"
+            android:text="发表"
+            android:textColor="#4389C4"
+            android:textSize="@dimen/qb_px_30"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_15"
+        android:background="@color/common_gray"/>
+
+    <EditText
+        android:paddingTop="@dimen/qb_px_15"
+        android:id="@+id/et_post_detail"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_287"
+        android:layout_marginEnd="@dimen/qb_px_32"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:background="@null"
+        android:gravity="top"
+        android:hint="@string/please_post_tip"/>
+
+    <com.yunzhou.tdinformation.view.blog.TweetPicturesPreviewer
+        android:id="@+id/tpp_picture"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginEnd="@dimen/qb_px_32"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:layout_weight="1"/>
+
+    <View style="@style/horizontal_line"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_564"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/qb_px_40"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:text="@string/add_tag"
+            android:textColor="@color/colorText9"
+            android:textSize="@dimen/qb_px_22"/>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_tag"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="@dimen/qb_px_100"
+            android:layout_marginLeft="@dimen/qb_px_14"
+            android:layout_marginRight="@dimen/qb_px_14"
+            android:layout_weight="1"/>
+    </LinearLayout>
+</LinearLayout>

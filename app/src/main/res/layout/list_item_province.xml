@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_type_title"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_24"
+        android:paddingLeft="@dimen/qb_px_32"
+        android:gravity="center_vertical"
+        android:text="其他地方彩种"
+        android:background="@color/base_F5F5F5"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_62"/>
+    <RelativeLayout
+        android:id="@+id/ll_province_area"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_89">
+        <TextView
+            android:id="@+id/tv_province_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/qb_px_32"
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/qb_px_32"
+            tools:text="北京"/>
+
+        <ImageView
+            android:id="@+id/iv_province_arrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/qb_px_32"
+            android:src="@mipmap/spinner_back"/>
+        <View
+            style="@style/horizontal_line"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"/>
+
+    </RelativeLayout>
+</LinearLayout>
+
+

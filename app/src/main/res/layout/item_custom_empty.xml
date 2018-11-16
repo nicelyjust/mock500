@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_216">
+    <ImageView
+        android:id="@+id/iv"
+        android:layout_width="@dimen/qb_px_132"
+        android:layout_height="@dimen/qb_px_141"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/qb_px_24"
+        android:src="@mipmap/empty"
+        android:contentDescription="@string/empty_subscribe_lottery"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv"
+        android:layout_centerHorizontal="true"
+        android:text="@string/empty_subscribe_lottery"
+        android:textColor="@color/colorText9"
+        android:textSize="@dimen/qb_px_24"/>
+</RelativeLayout>

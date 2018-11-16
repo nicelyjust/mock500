@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/common_gray"
+    tools:context=".login.fragment.LoginFragment">
+
+    <!--手机号-->
+    <com.yunzhou.tdinformation.view.login.LoginItem
+        android:id="@+id/in_input_phone"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_91"
+        app:li_style="phone"/>
+    <!--密码-->
+    <com.yunzhou.tdinformation.view.login.LoginItem
+        android:id="@+id/in_input_password"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_91"
+        android:layout_below="@id/in_input_phone"
+        app:li_style="password"/>
+
+    <TextView
+        android:id="@+id/tv_auth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/in_input_password"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:layout_marginTop="@dimen/qb_px_20"
+        android:includeFontPadding="false"
+        android:textColor="@color/colorText6"
+        tools:text="@string/app_password_login"/>
+
+    <TextView
+        android:id="@+id/tv_forget"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/tv_auth"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/qb_px_32"
+        android:includeFontPadding="false"
+        android:text="@string/app_forget_password"
+        android:textColor="@color/colorText6"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_confirm"
+        style="@style/confirm_btn_style"
+        android:layout_below="@id/tv_forget"
+        android:layout_marginTop="@dimen/qb_px_36"
+        android:text="@string/app_login_title"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/bt_register"
+        style="@style/register_btn_style"
+        android:layout_below="@id/bt_confirm"
+        android:layout_marginTop="@dimen/qb_px_30"
+        android:text="@string/app_register"/>
+
+</RelativeLayout>

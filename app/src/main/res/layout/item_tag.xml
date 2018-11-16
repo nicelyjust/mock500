@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView
+    android:gravity="center"
+    android:id="@+id/tv_tag_name"
+    android:layout_margin="@dimen/qb_px_17"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/qb_px_152"
+    android:layout_height="@dimen/qb_px_52"
+    android:textSize="@dimen/qb_px_24"
+    android:text="篮球天地"
+    android:background="@drawable/selector_post_tag_bg"
+    android:textColor="@color/post_tag_color"/>

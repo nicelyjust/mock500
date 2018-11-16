@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yunzhou.tdinformation.setting.PhoneBindingActivity">
+
+    <include layout="@layout/include_title_txt" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F0F0F0"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/qb_px_19"
+            android:layout_marginLeft="@dimen/qb_px_32"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:text="当前已绑定手机号码："
+            android:textColor="#333333"
+            android:textSize="@dimen/qb_px_28" />
+
+        <TextView
+            android:id="@+id/tv_phone_binding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/qb_px_19"
+            android:layout_marginTop="@dimen/qb_px_20"
+            android:text="*******0506"
+            android:textColor="#333333"
+            android:textSize="@dimen/qb_px_28" />
+    </LinearLayout>
+    <!--旧手机号-->
+    <com.yunzhou.tdinformation.view.login.LoginItem
+        android:id="@+id/li_old_phone_binding"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_91"
+        app:li_style="phone" />
+    <!--新手机号-->
+    <com.yunzhou.tdinformation.view.binding.BindingItem
+        android:id="@+id/li_new_phone_binding"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_91"
+        app:li_style="auth" />
+    <!--验证码-->
+    <com.yunzhou.tdinformation.view.binding.BindingItem
+        android:id="@+id/li_verification_code"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_91"
+        app:li_style="phone" />
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btn_confirm_binding"
+        style="@style/confirm_btn_style"
+        android:layout_marginTop="@dimen/qb_px_80"
+        android:text="@string/app_confirm" />
+</LinearLayout>

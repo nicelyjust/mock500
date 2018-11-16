@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_90"
+    android:background="@color/white"
+    android:paddingEnd="@dimen/qb_px_32"
+    android:paddingStart="@dimen/qb_px_32">
+    <RelativeLayout
+        android:id="@+id/rl_collect_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true">
+        <ImageView
+            android:id="@+id/ib_collect"
+            android:layout_width="@dimen/qb_px_45"
+            android:layout_height="@dimen/qb_px_38"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@mipmap/un_collect"/>
+        <TextView
+            android:id="@+id/tv_collect_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-1dp"
+            android:layout_toEndOf="@id/ib_collect"
+            android:textColor="@color/colorText9"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            tools:text="123"/>
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tv_comment"
+        android:layout_width="@dimen/qb_px_400"
+        android:layout_height="@dimen/qb_px_70"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_gray_stroke_bg"
+        android:gravity="center_vertical"
+        android:paddingEnd="@dimen/qb_px_20"
+        android:paddingStart="@dimen/qb_px_20"
+        android:text="@string/post_something"
+        android:textColorHint="@color/colorTextC"
+        android:textSize="@dimen/qb_px_26"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_comment_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/qb_px_15"
+        android:layout_toEndOf="@id/tv_comment">
+
+        <ImageView
+            android:id="@+id/iv_comment"
+            android:layout_width="@dimen/qb_px_42"
+            android:layout_height="@dimen/qb_px_42"
+            android:layout_centerVertical="true"
+            android:background="@mipmap/comment"
+            android:contentDescription="@null"/>
+
+        <TextView
+            android:id="@+id/tv_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_toEndOf="@id/iv_comment"
+            android:textColor="@color/colorText9"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            tools:text="123"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_like_area"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="@dimen/qb_px_15"
+        android:layout_toEndOf="@id/rl_comment_area">
+        <ImageView
+            android:id="@+id/ib_like"
+            android:layout_width="@dimen/qb_px_45"
+            android:layout_height="@dimen/qb_px_38"
+            android:background="@null"
+            android:contentDescription="@null"
+            android:src="@mipmap/un_like"/>
+        <TextView
+            android:id="@+id/tv_like_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-1dp"
+            android:layout_toEndOf="@id/ib_like"
+            android:textColor="@color/colorText9"
+            android:textSize="10sp"
+            tools:ignore="SmallSp"
+            tools:text="123"/>
+    </RelativeLayout>
+
+</RelativeLayout>

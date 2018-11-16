@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rl_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_material">
+        <ImageView
+            android:id="@+id/iv_func_icon"
+            android:layout_width="@dimen/qb_px_44"
+            android:layout_height="@dimen/qb_px_44"
+            android:layout_marginBottom="@dimen/qb_px_23"
+            android:layout_marginStart="@dimen/qb_px_32"
+            android:layout_marginTop="@dimen/qb_px_23"
+            android:src="@mipmap/mine_collect"/>
+        <TextView
+            android:textColor="@color/colorText3"
+            android:textSize="@dimen/qb_px_32"
+            android:id="@+id/tv_func_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/qb_px_30"
+            android:layout_toEndOf="@id/iv_func_icon"
+            android:text="func name"/>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/qb_px_32"
+            android:src="@mipmap/spinner_back"/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/v_func_line"
+        style="@style/horizontal_line"/>
+    <View
+        android:id="@+id/v_func_block"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_20"
+        android:background="#F0F0F0"/>
+</LinearLayout>

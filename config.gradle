@@ -1,0 +1,15 @@
+ext {
+    android = [
+            applicationId    : "com.yunzhou.tdinformation",
+            compileSdkVersion: 27,
+            buildToolsVersion: "26.0.2",
+            minSdkVersion    : 21,
+            targetSdkVersion : 27,
+            versionCode      : 1000,
+            versionName      : "0.1.0",
+    ]
+
+    support  = [
+            supportLibraryVersion : "27.1.1",
+    ]
+}

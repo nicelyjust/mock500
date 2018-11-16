@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/qb_px_70">
+    <View
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:layout_width="@dimen/qb_px_190"
+        android:layout_height="@dimen/qb_px_1"
+        android:layout_centerVertical="true"
+        android:background="@color/colorText9"/>
+    <TextView
+        android:id="@+id/tv_red_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        tools:text="可用优惠券(1张)"/>
+    <View
+        android:layout_marginEnd="@dimen/qb_px_32"
+        android:layout_alignParentEnd="true"
+        android:layout_width="@dimen/qb_px_190"
+        android:layout_height="@dimen/qb_px_1"
+        android:layout_centerVertical="true"
+        android:background="@color/colorText9"/>
+</RelativeLayout>

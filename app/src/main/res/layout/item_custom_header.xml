@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/qb_px_134">
+    <Button
+        android:id="@+id/btn_select_more_lottery"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/qb_px_78"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/qb_px_25"
+        android:layout_marginEnd="@dimen/qb_px_32"
+        android:layout_marginStart="@dimen/qb_px_32"
+        android:background="@drawable/selector_white_button_background"
+        android:text="@string/custom_more_lottery"
+        android:textColor="@color/colorText3"
+        android:textSize="@dimen/qb_px_30"/>
+</FrameLayout>
