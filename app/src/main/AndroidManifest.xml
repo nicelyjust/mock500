@@ -160,6 +160,9 @@
         <activity android:name=".setting.PhoneBindingActivity"
                   android:configChanges="orientation|screenSize|keyboardHidden"
                   android:launchMode="singleTop"/>
+        <activity android:name=".etc.AppBarDemoActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
         <provider
             android:name="android.support.v4.content.FileProvider"
             android:authorities="com.yunzhou.app.provider"

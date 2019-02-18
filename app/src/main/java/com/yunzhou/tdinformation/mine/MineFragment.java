@@ -31,6 +31,7 @@ import com.yunzhou.tdinformation.bean.user.UserEntity;
 import com.yunzhou.tdinformation.blog.MyPostBlogActivity;
 import com.yunzhou.tdinformation.constant.AppConst;
 import com.yunzhou.tdinformation.constant.NetConstant;
+import com.yunzhou.tdinformation.etc.AppBarDemoActivity;
 import com.yunzhou.tdinformation.login.LoginActivity;
 import com.yunzhou.tdinformation.mine.campaign.CampaignActivity;
 import com.yunzhou.tdinformation.mine.collect.CollectActivity;
@@ -319,7 +320,7 @@ public class MineFragment extends LazyBaseFragment implements View.OnClickListen
                     SettingActivity.start(mContext);
                 break;
             case R.id.ib_ring:
-
+                AppBarDemoActivity.start(mContext);
                 break;
             case R.id.iv_arrow_mine:
             case R.id.iv_mine_head:
