@@ -36,7 +36,7 @@ import pub.devrel.easypermissions.EasyPermissions;
  *  @文件名:   BLEActivity
  *  @创建者:   lz
  *  @创建时间:  2019/2/26 10:23
- *  @描述：    ble探究
+ *  @描述：    ble探究 todo:Gps是否需要开
  */
 public class BLEActivity extends BaseCommonAct implements EasyPermissions.PermissionCallbacks {
     private static final int RC_LOCATION_PERM = 0x03;
