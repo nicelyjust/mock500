@@ -148,6 +148,10 @@ public abstract class BaseRvAdapter<T> extends RecyclerView.Adapter {
         return mItems.get(pos);
     }
 
+    public List<T> getItems() {
+        return mItems;
+    }
+
     public static abstract class OnClickListener implements View.OnClickListener {
         @Override
         public void onClick(View v) {

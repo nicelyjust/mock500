@@ -85,9 +85,9 @@
     </style>
 
     <style name="AnimBottom" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
-        <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
-    </style>
+    <item name="android:windowEnterAnimation">@anim/push_bottom_in</item>
+    <item name="android:windowExitAnimation">@anim/push_bottom_out</item>
+</style>
 
     <style name="AnimHorizon" parent="@android:style/Animation">
         <item name="android:windowEnterAnimation">@anim/push_horizon_in</item>

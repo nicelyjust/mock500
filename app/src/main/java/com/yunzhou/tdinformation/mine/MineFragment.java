@@ -20,7 +20,6 @@ import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
 import com.yunzhou.common.http.bean.DataBean;
 import com.yunzhou.common.http.bean.JsonResult;
-import com.yunzhou.common.utils.FastClickUtil;
 import com.yunzhou.common.utils.L;
 import com.yunzhou.common.utils.TDevice;
 import com.yunzhou.tdinformation.R;
@@ -32,6 +31,7 @@ import com.yunzhou.tdinformation.blog.MyPostBlogActivity;
 import com.yunzhou.tdinformation.constant.AppConst;
 import com.yunzhou.tdinformation.constant.NetConstant;
 import com.yunzhou.tdinformation.etc.AppBarDemoActivity;
+import com.yunzhou.tdinformation.etc.BLEActivity;
 import com.yunzhou.tdinformation.login.LoginActivity;
 import com.yunzhou.tdinformation.mine.campaign.CampaignActivity;
 import com.yunzhou.tdinformation.mine.collect.CollectActivity;
@@ -42,7 +42,6 @@ import com.yunzhou.tdinformation.mine.help.HelpActivity;
 import com.yunzhou.tdinformation.mine.payarticle.PayArticleActivity;
 import com.yunzhou.tdinformation.mine.red.MyRedPacketActivity;
 import com.yunzhou.tdinformation.mine.widget.FuncItem;
-import com.yunzhou.tdinformation.setting.SettingActivity;
 import com.yunzhou.tdinformation.user.UserActivity;
 import com.yunzhou.tdinformation.user.UserManager;
 import com.yunzhou.tdinformation.view.badgeview.BadgeFactory;
@@ -316,8 +315,9 @@ public class MineFragment extends LazyBaseFragment implements View.OnClickListen
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.ib_setting:
-                if (!FastClickUtil.isFastClick())
-                    SettingActivity.start(mContext);
+                /*if (!FastClickUtil.isFastClick())
+                    SettingActivity.start(mContext);*/
+                BLEActivity.start(mContext);
                 break;
             case R.id.ib_ring:
                 AppBarDemoActivity.start(mContext);
