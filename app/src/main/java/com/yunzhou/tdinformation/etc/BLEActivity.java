@@ -2,6 +2,7 @@ package com.yunzhou.tdinformation.etc;
 
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
 import android.content.Context;
@@ -10,6 +11,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -45,7 +47,7 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
     @BindView(R.id.rv_device)
     RecyclerView mRv;
     private BluetoothAdapter mBluetoothAdapter;
-    private SimpleAdapter mAdapter;
+    private DeviceAdapter mAdapter;
     private BtScan mBtScanCallback;
     private boolean mScaning;
 
@@ -59,7 +61,7 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
         super.initWidget(savedInstanceState);
         mBtScanCallback = new BtScan(this);
         mRv.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new SimpleAdapter(this);
+        mAdapter = new DeviceAdapter(this);
         mRv.setAdapter(mAdapter);
     }
 
@@ -103,24 +105,31 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
         if (!mBluetoothAdapter.enable()) {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, 10);
-        }
+        } /*else{
+            scanBlueTooth(true);
+        }*/
         scanBlueTooth(true);
     }
 
     private void scanBlueTooth(boolean enable) {
+        final BluetoothLeScanner bluetoothLeScanner = mBluetoothAdapter.getBluetoothLeScanner();
+        if (bluetoothLeScanner == null) {
+            Log.e(TAG, "scanBlueTooth: bluetoothLeScanner === null" );
+            return;
+        }
         if (enable) {
             AppManager.getsHandler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     mScaning = false;
-                    mBluetoothAdapter.getBluetoothLeScanner().stopScan(mBtScanCallback);
+                    bluetoothLeScanner.stopScan(mBtScanCallback);
                 }
             }, SCAN_TIME);
             mScaning = true;
-            mBluetoothAdapter.getBluetoothLeScanner().startScan(mBtScanCallback);
+            bluetoothLeScanner.startScan(mBtScanCallback);
         } else {
             mScaning = false;
-            mBluetoothAdapter.getBluetoothLeScanner().stopScan(mBtScanCallback);
+            bluetoothLeScanner.stopScan(mBtScanCallback);
         }
 
     }
@@ -156,8 +165,8 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
         public void onScanResult(int callbackType, ScanResult result) {
             BLEActivity bleActivity = mWeakReference.get();
             L.d(TAG, "onLeScan: " + Thread.currentThread().getName());
-            if (result.getDevice() != null && !bleActivity.mAdapter.getItems().contains(result.getDevice().getAddress())) {
-                bleActivity.mAdapter.addItem(result.getDevice().getAddress());
+            if (result.getDevice() != null && !bleActivity.mAdapter.getItems().contains(result.getDevice())) {
+                bleActivity.mAdapter.addItem(result.getDevice());
             }
         }
 
