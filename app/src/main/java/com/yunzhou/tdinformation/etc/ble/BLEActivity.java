@@ -1,14 +1,18 @@
-package com.yunzhou.tdinformation.etc;
+package com.yunzhou.tdinformation.etc.ble;
 
 import android.Manifest;
 import android.bluetooth.BluetoothAdapter;
+import android.bluetooth.BluetoothDevice;
 import android.bluetooth.le.BluetoothLeScanner;
 import android.bluetooth.le.ScanCallback;
 import android.bluetooth.le.ScanResult;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.ServiceConnection;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.IBinder;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -36,7 +40,7 @@ import pub.devrel.easypermissions.EasyPermissions;
  *  @文件名:   BLEActivity
  *  @创建者:   lz
  *  @创建时间:  2019/2/26 10:23
- *  @描述：    ble探究 todo:Gps是否需要开
+ *  @描述：    ble探究,扫取特征设备
  */
 public class BLEActivity extends BaseCommonAct implements EasyPermissions.PermissionCallbacks {
     private static final int RC_LOCATION_PERM = 0x03;
@@ -50,6 +54,9 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
     private DeviceAdapter mAdapter;
     private BtScan mBtScanCallback;
     private boolean mScaning;
+    private Intent mGattIntent;
+    private ServiceConnection mServiceConnection;
+    private BluetoothLeService mService;
 
     @Override
     protected int getContentView() {
@@ -61,8 +68,30 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
         super.initWidget(savedInstanceState);
         mBtScanCallback = new BtScan(this);
         mRv.setLayoutManager(new LinearLayoutManager(this));
-        mAdapter = new DeviceAdapter(this);
+        mAdapter = new DeviceAdapter(this, new DeviceAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int pos) {
+                BluetoothDevice device = mAdapter.getItem(pos);
+
+            }
+        });
         mRv.setAdapter(mAdapter);
+
+        mGattIntent = new Intent(this, BluetoothLeService.class);
+        mServiceConnection = new ServiceConnection() {
+            @Override
+            public void onServiceConnected(ComponentName name, IBinder iBinder) {
+                L.d(TAG, "onServiceConnected: ComponentName = " + name);
+                BluetoothLeService.LeBinder leBinder = (BluetoothLeService.LeBinder) iBinder;
+                mService = leBinder.getService();
+            }
+
+            @Override
+            public void onServiceDisconnected(ComponentName name) {
+                L.d(TAG, "onServiceDisconnected: ComponentName = " + name);
+            }
+        };
+        bindService(mGattIntent, mServiceConnection, BIND_AUTO_CREATE);
     }
 
     @AfterPermissionGranted(RC_LOCATION_PERM)
@@ -89,6 +118,7 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_search:
+                //ToastUtil.showShort(this,mService.getTAG());
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
                     requestLocation();
                 } else {
@@ -102,9 +132,10 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
         if (mBluetoothAdapter == null) {
             mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         }
-        if (!mBluetoothAdapter.enable()) {
+        if (!mBluetoothAdapter.isEnabled()) {
             Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
             startActivityForResult(enableBtIntent, 10);
+            //mBluetoothAdapter.enable();
         } /*else{
             scanBlueTooth(true);
         }*/
@@ -114,7 +145,7 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
     private void scanBlueTooth(boolean enable) {
         final BluetoothLeScanner bluetoothLeScanner = mBluetoothAdapter.getBluetoothLeScanner();
         if (bluetoothLeScanner == null) {
-            Log.e(TAG, "scanBlueTooth: bluetoothLeScanner === null" );
+            Log.e(TAG, "scanBlueTooth: bluetoothLeScanner === null");
             return;
         }
         if (enable) {
@@ -147,6 +178,8 @@ public class BLEActivity extends BaseCommonAct implements EasyPermissions.Permis
     protected void onDestroy() {
         super.onDestroy();
         scanBlueTooth(false);
+        unbindService(mServiceConnection);
+        //topService(mGattIntent);
     }
 
     public static void start(Context context) {

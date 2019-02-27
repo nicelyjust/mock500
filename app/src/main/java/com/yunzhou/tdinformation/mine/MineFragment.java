@@ -31,7 +31,7 @@ import com.yunzhou.tdinformation.blog.MyPostBlogActivity;
 import com.yunzhou.tdinformation.constant.AppConst;
 import com.yunzhou.tdinformation.constant.NetConstant;
 import com.yunzhou.tdinformation.etc.AppBarDemoActivity;
-import com.yunzhou.tdinformation.etc.BLEActivity;
+import com.yunzhou.tdinformation.etc.ble.BLEActivity;
 import com.yunzhou.tdinformation.login.LoginActivity;
 import com.yunzhou.tdinformation.mine.campaign.CampaignActivity;
 import com.yunzhou.tdinformation.mine.collect.CollectActivity;

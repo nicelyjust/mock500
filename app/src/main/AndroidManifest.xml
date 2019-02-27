@@ -169,7 +169,7 @@
                   android:launchMode="singleTop"/>
         <activity android:name=".etc.AppBarDemoActivity"
             android:theme="@style/AppTheme.NoActionBar"/>
-        <activity android:name=".etc.BLEActivity" />
+        <activity android:name=".etc.ble.BLEActivity" />
 
         <provider
             android:name="android.support.v4.content.FileProvider"
@@ -181,5 +181,6 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
+        <service android:name=".etc.ble.BluetoothLeService" />
     </application>
 </manifest>

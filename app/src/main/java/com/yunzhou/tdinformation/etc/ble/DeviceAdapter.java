@@ -1,4 +1,4 @@
-package com.yunzhou.tdinformation.etc;
+package com.yunzhou.tdinformation.etc.ble;
 
 import android.bluetooth.BluetoothDevice;
 import android.content.Context;
@@ -22,8 +22,11 @@ import com.yunzhou.tdinformation.base.BaseRvAdapter;
  */
 public class DeviceAdapter extends BaseRvAdapter<BluetoothDevice> {
 
-    public DeviceAdapter(Context context) {
+    private OnItemClickListener mListener;
+
+    public DeviceAdapter(Context context, OnItemClickListener listener) {
         super(context);
+        mListener = listener;
     }
 
     @Override
@@ -36,11 +39,22 @@ public class DeviceAdapter extends BaseRvAdapter<BluetoothDevice> {
     protected void bindHolderView(RecyclerView.ViewHolder holder, BluetoothDevice bluetoothDevice, int position) {
         if (holder instanceof ArticleHolder) {
             ArticleHolder vh = (ArticleHolder) holder;
-            vh.mTvArticleDetail.setText("name : " + bluetoothDevice.getName()+ ";" + position);
+            vh.mTvArticleDetail.setText("name : " + bluetoothDevice.getName() + ";" + position);
             vh.mTvAuthorName.setText(bluetoothDevice.getAddress());
             vh.mTvViewCount.setText(String.valueOf(bluetoothDevice.getType()));
             vh.mTvPayTag.setVisibility(View.GONE);
+            vh.itemView.setTag(position);
+            vh.itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mListener.onItemClick((int) v.getTag());
+                }
+            });
         }
+    }
+
+    interface OnItemClickListener {
+        void onItemClick(int pos);
     }
 
     static class ArticleHolder extends RecyclerView.ViewHolder {
