@@ -1,6 +1,7 @@
 package com.yunzhou.tdinformation.utils;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.PackageManager;
 import android.location.Location;
@@ -41,6 +42,7 @@ public class GPSLocationManager {
         }
     }
 
+    @SuppressLint("MissingPermission")
     public Location getLoction() {
         List<String> providers = mLocationManager.getProviders(true);
         if (ActivityCompat.checkSelfPermission(mContextWeakReference.get(), Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(mContextWeakReference.get(), Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {

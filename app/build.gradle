@@ -18,8 +18,31 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
-}
+    flavorDimensions "inner", "outside"
+    productFlavors {
+        xiaomi {
+            dimension "outside"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "xiaomi"]
+        }
+        meizu {
+            dimension "outside"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "meizu"]
+        }
+        dev{
+            dimension "inner"
+            applicationIdSuffix ".dev"
+            versionNameSuffix "-dev"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "dev"]
+        }
+        alpha{
+            dimension "inner"
+            applicationIdSuffix ".alpha"
+            versionNameSuffix "-alpha"
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "alpha"]
+        }
 
+    }
+}
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
     def support = rootProject.ext.support
