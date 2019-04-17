@@ -2,6 +2,7 @@ package com.yunzhou.tdinformation;
 
 import org.junit.Test;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +18,13 @@ public class ExampleUnitTest {
         for (String s : stringList) {
             System.out.println(s);
         }
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        long millis = System.currentTimeMillis();
+        String format = simpleDateFormat.format(millis);
+        System.out.println(format);
+        millis = millis / 1000;
+        long l = millis * 1000;
+        System.out.println(simpleDateFormat.format(l));
     }
 
     private List<String> splitOpenCode(String openCode) {
