@@ -12,6 +12,8 @@ import com.scwang.smartrefresh.layout.footer.ClassicsFooter;
 import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.yunzhou.common.BaseApplication;
 
+import io.flutter.view.FlutterMain;
+
 
 /*
  *  @项目名：  TDInformation 
@@ -44,6 +46,7 @@ public class AppManager extends BaseApplication {
     @Override
     public void onCreate() {
         super.onCreate();
+        FlutterMain.startInitialization(this);
     }
 
     @Override

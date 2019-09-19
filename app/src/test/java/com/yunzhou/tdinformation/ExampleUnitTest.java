@@ -1,8 +1,9 @@
 package com.yunzhou.tdinformation;
 
+import android.annotation.SuppressLint;
+
 import org.junit.Test;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,17 +15,10 @@ import java.util.List;
 public class ExampleUnitTest {
     @Test
     public void addition_isCorrect() throws Exception {
-        List<String> stringList = splitOpenCode("06,07,21,29,30+01,10");
-        for (String s : stringList) {
-            System.out.println(s);
-        }
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        long millis = System.currentTimeMillis();
-        String format = simpleDateFormat.format(millis);
-        System.out.println(format);
-        millis = millis / 1000;
-        long l = millis * 1000;
-        System.out.println(simpleDateFormat.format(l));
+        String s = "Thursday Aug 1,16:28";
+        String today = s.replaceFirst("\\w+.|\\s", "Today.");
+        System.out.println(s);
+        System.out.println(today);
     }
 
     private List<String> splitOpenCode(String openCode) {
@@ -48,5 +42,22 @@ public class ExampleUnitTest {
             stringList.add(blueCode);
         }
         return stringList;
+    }
+
+    @SuppressLint("DefaultLocale")
+    public static String formatDuration(int value) {
+        int hours = value / 3600;
+        int minutes = value % 3600 / 60;
+        int seconds = value % 3600 % 60;
+        String fHours = String.format("%02d", hours);
+        String fMinutes = String.format("%02d", minutes);
+        String fSeconds = String.format("%02d", seconds);
+
+        if (fHours.equals("00"))
+            fHours = "0";
+        else if (fHours.startsWith("0")) {
+            fHours = fHours.substring(1);
+        }
+        return fHours + ":" + fMinutes + ":" + fSeconds;
     }
 }

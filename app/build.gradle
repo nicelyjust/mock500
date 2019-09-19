@@ -44,7 +44,7 @@ android {
     }
 }
 dependencies {
-    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation fileTree(include: ['*.jar','*.aar'], dir: 'libs')
     def support = rootProject.ext.support
     implementation "com.android.support:appcompat-v7:${support.supportLibraryVersion}"
     implementation "com.android.support:recyclerview-v7:${support.supportLibraryVersion}"
